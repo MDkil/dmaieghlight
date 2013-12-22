@@ -1,0 +1,330 @@
+@import url("http://fonts.googleapis.com/css?family=Lato:400,700,900,400italic");
+@import url("http://fonts.googleapis.com/css?family=Tauri");
+@font-face {
+    font-family: 'BrushScriptStd';
+    src: url('BrushScriptStd.eot');
+}
+
+.navApplication
+{
+	width: 900px;
+	height: 50px;
+	margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.navApplication img
+{
+	height: 50px;
+	border-radius: 50%;
+	float: left;
+}
+.navApplication h1
+{
+	color: white;
+	display: inline-block;
+	margin-left: 5px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-size: 41px;
+	font-family: 'BrushScriptStd';
+	letter-spacing:2px;
+	font-style: normal;
+}
+.navApplication ul
+{
+	width: 392px;
+	height: 100%;
+	float: right;
+	margin-top: 0px;
+	padding-left: 8px;
+	border-radius: 6px;
+	background-color: #6cc4ff;
+}
+.navApplication ul li
+{
+	display: inline-block;
+	color: white;
+	padding-top: 16px;
+	padding-left: 8px;
+	padding-right: 8px;
+	padding-bottom: 16px;
+	-webkit-transition: background-color 0.3s;
+	-moz-transition: background-color 0.3s;
+	-ms-transition: background-color 0.3s;
+	-o-transition: background-color 0.3s;
+}
+.navApplication ul li:hover
+{
+	background-color: #0099ff;
+	-webkit-transition: background-color 0.3s;
+	-moz-transition: background-color 0.3s;
+	-ms-transition: background-color 0.3s;
+	-o-transition: background-color 0.3s;
+	cursor: pointer !important ;
+}
+.navApplication ul li a
+{
+	font-family: 'Tauri', sans-serif;
+    color: #ECF0F1;
+    font-size: 14px;
+}
+
+.cadreApplication
+{
+	width: 892px;
+	height: 450px;
+	margin-top: 30px;
+	background-color: #ECF0F1 ;
+	background-size: 100% 100%;
+	border-radius: 6px;
+	border: 4px solid white;
+	box-shadow: 3px 3px 16px black;
+}
+.visibleApplication
+{
+	margin-left: auto;
+	margin-right: auto;
+	-webkit-transition: margin-left 1s linear;
+	-moz-transition: margin-left 1s linear;
+	-ms-transition: margin-left 1s linear;
+	-o-transition: margin-left 1s linear;
+}
+.invisibleApplication
+{
+	margin-left: -1000px;
+	-webkit-transition: margin-left 1s;
+	-moz-transition: margin-left 1s;
+	-ms-transition: margin-left 1s;
+	-o-transition: margin-left 1s;
+	opacity: 0;
+}
+.sliderApplication
+{
+	height: 100%;
+	width: 100%;
+	background-image: url("../medias/images/slide/2.jpg");
+	background-size: 100% 100%;
+	-webkit-transition: background-image 2s;
+	-moz-transition: background-image 2s;
+	-ms-transition: background-image 2s;
+	-o-transition: background-image 2s;
+}
+
+.aproposApplication
+{
+	margin-top: -458px;
+}
+.aproposApplication .imagepersoApplication
+{
+	height: 100%;
+	width: 250px;
+	background-color: black;
+	border-radius: 6px 0 0 6px ;
+	border-right: 4px solid white;
+	float: left;
+}
+.aproposApplication h1
+{
+	margin-left: 270px;
+	font-family: "Tauri", sans-serif;
+	color: #34495E;
+	margin-bottom: 5px;
+}
+.aproposApplication .aproposgroupeApplication p
+{
+	margin-left: 295px;
+	margin-top: 5px;
+	margin-bottom: 0px;
+	font-size: 12px;
+	font-family: "Lato", sans-serif;
+	color: #7F8C8D;
+}
+.aproposApplication .aproposgroupeApplication img
+{
+	width: 15px;
+	float: left;
+	margin-left: 20px;
+}
+.aproposApplication > p
+{
+	margin-left: 275px;
+	margin-right: 40px;
+	text-align: justify;
+	font-family: "Lato", sans-serif;
+	font-size: 15px;
+}
+
+
+.competencesApplication
+{
+	margin-top: -458px;
+}
+.competencesApplication .imagepersoApplication
+{
+	height: 100%;
+	width: 250px;
+	background-color: black;
+	border-radius: 6px 0 0 6px ;
+	border-right: 4px solid white;
+	float: left;
+}
+.competencesApplication ul li
+{
+	margin-top: 10px;
+	display: inline-block;
+}
+.competencesApplication h1
+{
+	margin-left: 270px;
+	font-family: "Tauri", sans-serif;
+	color: #34495E;
+	margin-bottom: 5px;
+}
+.competencesApplication a
+{
+	font-family: "Tauri", sans-serif;
+	margin-left: 20px;
+	color: #7F8C8D;
+	font-size: 20px;
+	display: inline;
+	float: left;
+}
+.competencesApplication  .surchargementApplication
+{
+	width: 400px;
+	height: 20px;
+	background-color: #7F8C8D;
+	margin-left: 180px;
+	margin-top: 3px;
+	border-radius: 6px;
+}
+.surchargementApplication .avancementApplication
+{
+	height: 20px;
+	background-color: #34495E;
+	border-radius: 6px;
+} 
+
+.projetsApplication
+{
+	margin-top: -458px;
+}
+.projetsApplication ul
+{
+	margin-top:30px;
+	padding-left: 0px;
+	padding-bottom: 100px;
+}
+.projetsApplication ul li
+{
+	width: 700px;
+	height: 120px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+	background-color: white;
+	border-radius: 10px;
+	display: block;
+	cursor: pointer !important;
+}
+.projetsApplication img
+{
+	border-radius: 10px 0 0px 10px;
+	border-right: 4px solid #ECF0F1;
+	vertical-align: center;
+	float: left;
+}
+.projetsApplication .informationsApplication
+{
+	width: 450px;
+	height: 100%;
+	border-right: 4px solid #ECF0F1;
+	display: inline-block;
+	float: left;
+	padding-left: 10px;
+}
+.projetsApplication span
+{
+	vertical-align: center;
+}
+.projetsApplication .informations h4
+{
+	margin-top: 25px;
+	margin-bottom: 10px;
+	color: #34495e;
+	font-family: 'Tauri', sans-serif;
+}
+.projetsApplication .informationsApplication p
+{
+	margin-top: 0px;
+	text-align: justify;
+	margin-right: 20px;
+}
+.projetsApplication .scoreApplication
+{
+	width: 100px;
+	height: 100%;
+	text-align: center;
+	display: inline-block;
+	float: left;
+}
+.projetsApplication .scoreApplication a
+{
+	padding-top: 41px;
+	padding-bottom: 41px;
+	display: inline-block;
+	color: #34495e;
+	font-family: 'Tauri', sans-serif;
+    font-size: 30px;
+}
+.projetsApplication .scoreApplication a
+{
+	padding-top: 41px;
+	padding-bottom: 41px;
+	display: inline-block;
+	color: #34495e;
+	font-family: 'Tauri', sans-serif;
+    font-size: 30px;
+}
+
+.contactiniApplication
+{
+	margin-top: -458px;
+}
+.contactiniApplication > img
+{
+	height: 100%;
+	width: 250px;
+	border-radius: 6px 0 0 6px ;
+	border-right: 4px solid white;
+	display: inline;
+}
+.contactiniApplication .containercontactApplication
+{
+	width: 600px;
+	height: 450px;
+	margin-top: -450px;
+	margin-left: 260px;	
+}
+.contactiniApplication .containercontactApplication h1
+{
+	color: #34495e;
+	font-family: 'Tauri', sans-serif;
+}
+.contactiniApplication .containercontactApplication a
+{
+	font-family: "Tauri", sans-serif;
+	margin-left: 20px;
+	color: #7F8C8D;
+	font-size: 12px;
+}
+.miniconApplication
+{
+	width: 25px;
+}
+.contactiniApplication ul li
+{
+	margin: 5px;
+	display: inline-block;
+}

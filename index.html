@@ -1,0 +1,246 @@
+<html>
+<head>
+	<title>Dmaiegh light!</title>
+	<meta contect="description" contect="Créer votre site web automatique !">
+	<meta content="keywords" contect="dmaiegh, lite, developper, create, generat, code, personnel, site, web, en ligne">
+	<meta name="author" content="Nagati Mohamed Akil">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/siteperso.css">
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+
+	<!-- **************************** Page d'Accuel ****************************-->
+	<!-- Cloud annimation -->
+	<div id="cloud" class="background-debut"></div>
+	<!-- NavBar -->
+	<nav id="navAccueil">
+		<img src="medias/images/logo.png">
+		<ul>
+			<li class="debut borderito accueil" onClick="ouvrirAccueil();"><b>ACCUEIL</b></li>
+			<li class="borderito apropos" onClick="ouvrirAPropos('apropos');"><b>A PROPOS</b></li>
+			<li class="borderito guide" onClick="ouvrirGuide('guide');"><b>GUIDE</b></li>
+			<li class="borderito conditions" onClick="ouvrirAPropos('conditions');"><b>CONDITIONS</b></li>
+			<li class="fin contact" onClick="ouvrirGuide('contact');"><b>CONTACT</b></li>
+		</ul>
+	</nav>
+	<!-- Cadre Accueil -->
+	<div class="cadreAccueil" id="accueil">
+			<!-- Cadre video -->
+		<div class="cadreVideo">
+			<video poster="medias/player/poster.jpg" width="550px" id="mainvideo">
+				<source src="medias/videos/big_buck_bunny.mp4" type="video/mp4">
+			</video>
+			<div class="controls">
+				<div class="play" id="playpause" onClick="playPause();">
+   					</div>
+   					
+   					<div id="videoprogressbar" class="videoprogressbar"  >
+   						<div id="avancement" class="avancement">
+   						</div>
+   						<div class="topavancement">
+   						</div>
+   					</div>
+   					
+   					<a id="avancementnum"><b>00</b></a>
+   					<a id="avancementsur"><b>/ 00</b></a>
+   					
+   					<div id="audio" class="audioOn" onClick="mute(); false;" >
+   					</div>
+   					
+   					<div class="fullscreen" onclick="enterFullscreen(mainvideo)">
+   					</div>
+			</div>
+		</div>
+			<!-- Cadre : commencer maintenant -->
+		<div class="cadreCommencer">
+			<form>
+				<input type="text" id="pseudo" onblur="verifPseudo();" placeholder="Pseudo">
+				<input type="text" id="nom" onBlur="verifNomPrenom('nom')" placeholder="Nom">
+				<input type="text" id="prenom" onBlur="verifNomPrenom('prenom')" placeholder="Prenom">
+				<input type="email" id="email" onBlur="validerEmail('email')" placeholder="E-mail">
+				<input type="date" onBlur="validerDate()" id="date">
+				<button id="commencer" onClick="commencerLApplication(); return false;" >Commencer</button>
+			</form>
+		</div>
+	</div>
+
+	<!-- Cadre A propos -->
+	<div class="cadre" id="apropos">
+		<div class="cadreInformations">
+			<img src="medias/images/aproposDmaiegh.png">
+				<h5>Dmaiegh light, est la version reduite de Dmaiegh.Tn qui vous offre la possiblité de generer le code vos sites en ligne sans etre obligé de le developper tout seul.</h5>
+				<div class="feautures">
+					<div class="feautre">
+						<img src="medias/images/compass.png">
+						<h3>Simple à utiliser</h3>
+					</div>
+					<div class="feautre">
+						<img src="medias/images/colors.png">
+						<h3>Super design</h3>
+					</div>
+					<div class="feautre">
+						<img src="medias/images/settings.png">
+						<h3>Facile a configurer</h3>
+					</div>
+				</div>
+		</div>
+	</div>
+
+	<!-- Black Cadre -->
+		<div class="cadreGuideBlack" id="cadreGuideBlack" onClick="fermerGuide();"></div>
+
+	<!-- Guide Cadre -->
+	<div class="cadreGuideBlock" id="guide">
+		<div class="cadreGuide" onClick="statusCurseur();">
+			<video poster="medias/player/poster.jpg" controls width="700px" >
+				<source src="medias/videos/big_buck_bunny.mp4" type="video/mp4">
+			</video>
+		</div>
+	</div>
+	
+	<!-- Cadre Conditions -->
+	<div class="cadre" id="conditions">
+		<div class="cadreInformations">
+			<img src="medias/images/aproposDmaiegh.png">
+			<h2>Conditions D'utilisation</h2>
+			<ul>
+				<li>Le respect de votre vie privée nous tient à cœur. Notre Politique d’utilisation des données a été établie dans le but de vous informer sur la manière dont vous pouvez utiliser Dmaiegh pour publier des informations et sur la manière dont nous collectons et utilisons votre contenu et vos données personnelles. Nous vous encourageons à lire la Politique d’utilisation des données et à la consulter afin de prendre des décisions averties.</li>
+				<li>Le respect de votre vie privée nous tient à cœur. Notre Politique d’utilisation des données a été établie dans le but de vous informer sur la manière dont vous pouvez utiliser Dmaiegh pour publier des informations et sur la manière dont nous collectons et utilisons votre contenu et vos données personnelles. Nous vous encourageons à lire la Politique d’utilisation des données et à la consulter afin de prendre des décisions averties.</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- Cadre Contact -->
+	<div class="cadreGuideBlock" id="contact">
+		<div class="cadreContact" id="code">
+			<form>
+				<input type="text" id="cnom" onBlur="verifNomPrenom('cnom')" placeHolder="Nom">
+				<input type="text" id="cprenom" onBlur="verifNomPrenom('cprenom')" placeHolder="Prenom">
+				<input type="text" id="cemail" onBlur="validerEmail('cemail')" placeHolder="E-mail">
+				<textarea id="heretest" placeHolder="Message" rows="9"></textarea>
+				<button id="cbutton">Envoyer</button>
+			</form>
+		</div>
+	</div>
+
+
+	<!-- **************************** Cadre de site Perso ****************************-->
+	<div id="application">
+		<div class="navApplication">
+			<img id="persoLogo" src="http://mdakil.me/dmaiegh/medias/images/persoSite/mdkil.png">
+			<h1 id="persoPseudo">Dmaiegh</h1>  
+			<ul id="persoNav">
+				<li onclick="chargerAccueil();"><a>Accueil</a></li>
+				<li onclick="chargerApropos();"><a>A propos</a></li>
+				<li onclick="chargerCompetences();"><a>Compétences</a></li>
+				<li onclick="chargerProjets();"><a>Projets</a></li>
+				<li onclick="chargerContact();"><a>Contact</a></li>
+			</ul>
+		</div>
+
+		<!-- Accueil -->
+		<div id="accueilApplication" class="cadreApplication accueilApplication visibleApplication">
+			<div id="persoSlider" class="sliderApplication">
+			</div>
+		</div>
+
+		<!-- A propos </div> -->
+		<div id="aproposApplication" class="cadreApplication aproposApplication invisibleApplication">
+			<img id="persoAProposLateral" class="imagepersoApplication" src="http://mdakil.me/dmaiegh/medias/images/persoSite/apropos.jpg"> 
+			<h1 id="persoNomEtPrenom" >Nagati Mohamed Akil</h1>
+			<div class="aproposgroupeApplication">
+				<img src="http://mdakil.me/dmaiegh/medias/images/persoSite/employeur.png">
+				<p id="persoEmployeur">Employeur: One Shot Concept</p>
+			</div>
+			<div class="aproposgroupeApplication">
+				<img src="http://mdakil.me/dmaiegh/medias/images/persoSite/etablisement.png">
+				<p id="persoEtablissement">Etablissement: Faculté des sciences de Tunis</p>
+			</div>
+			<p id="persoAPropos">
+				Un Geek webmaster/webdesigner ainsi qu'un developpeur mobile débutant, Etudiant à la faculté des sciences de Tunis en 1er année licence fondamental en sciences informatique. <br> membre du Club infoplus FST
+			</p>
+		</div>
+
+		<!-- Competences -->
+		<div id="competencesApplication" class="cadreApplication competencesApplication invisibleApplication">
+			<img id="persoCompetencesLateral" class="imagepersoApplication" src="http://mdakil.me/dmaiegh/medias/images/persoSite/apropos.jpg">
+			<h1>Competences:</h1>
+			<ul id="persoCompetences">
+				
+			</ul>
+		</div>
+
+		<!-- Projets -->
+		
+		<div id="projetsApplication" class="cadreApplication projetsApplication invisibleApplication">
+			<ul id="persoProjets">
+					
+			</ul>
+		</div>
+
+		<!-- Contact -->
+
+		<div id="contactiniApplication" class="cadreApplication contactiniApplication invisibleApplication">
+			<img id="persoContactLateral" src="http://mdakil.me/dmaiegh/medias/images/persoSite/apropos.jpg">
+			<div class="containercontactApplication">
+				<h1> Contact </h1>
+				<a id="persoEmail"> E-mail: nagatimed@gmail.com </a>
+				<form>
+					<input type="text" id="cnomApplication" onBlur="verifNomPrenom('cnomApplication')" placeHolder="Nom">
+					<input type="text" id="cprenomApplication" onBlur="verifNomPrenom('cprenomApplication')" placeHolder="Prenom">
+					<input type="text" id="cemailApplication" onBlur="validerEmail('cemailApplication')" placeHolder="E-mail">
+					<textarea placeHolder="Message" rows="3"></textarea>
+					<button>Envoyer</button>
+				</form>
+
+		 	</div>
+		</div>
+
+	</div>
+
+	<!-- Pannel -->
+	<div id="pannel">
+		<div id="titre"> 
+			Dmaiegh Pannel
+		</div>
+		<div class="menu">
+			<form>
+				<h3>Design</h3>
+				<input onBlur="changerBackground();" id="changerArriere" type="text" placeHolder="Arriére plan">
+				<input onBlur="changerSource('persoLogo' ,'changerLogo')" id="changerLogo" type="text" placeHolder="Logo">
+				<input onBlur="changerLateralImg();" id="changerLateral" type="text" placeHolder="Image Lateral">
+				<input onBlur="changerNavColor();" id="changerNav" type="text" placeHolder="Color de nav">
+				<h3>Slide Forme</h3>
+				<input onBlur="changerSlid(0);" id="changerSlid0" type="text" placeHolder="Slide 1">
+				<input onBlur="changerSlid(1);" id="changerSlid1" type="text" placeHolder="Slide 2">
+				<input onBlur="changerSlid(2);" id="changerSlid2" type="text" placeHolder="Slide 3">
+				<h3>A propos</h3>
+				<input onBlur="changerValeur('persoEmployeur', 'employeur');" id="employeur" type="text" placeHolder="Employeur">
+				<input onBlur="changerValeur('persoEtablissement', 'etablissement');" id="etablissement" type="text" placeHolder="Etablisement">
+				<textarea onBlur="changerValeur('persoAPropos', 'aPropos');" id="aPropos" rows="3" placeHolder="A propos"></textarea>
+				<h3>Competences</h3>
+				<input id="competence" type="text" placeHolder="Competence">
+				<input id="pourcentage" type="text" placeHolder="Pourcentage">
+				<button onClick="ajouterCompetence(); return false;">Ajouter</button>
+				<h3>Projets</h3>
+				<input id="projet" type="text" placeHolder="Projet">
+				<input id="discription" type="text" placeHolder="Description">
+				<input id="image" type="text" placeHolder="Image">
+				<input id="note" type="text" placeHolder="Note">
+				<button onClick="ajouterProjet(); return false;">Ajouter</button>
+				<button onClick="donnerCode(); return false;" class="terminer">Terminer</button>
+			</form>
+		</div>
+	</div>
+
+</body>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript" src="js/player.js"></script>
+<script type="text/javascript" src="js/cloudanimation.js"></script>
+<script type="text/javascript" src="js/nav.js"></script>
+<script type="text/javascript" src="js/controle.js"></script>
+<script type="text/javascript" src="js/application.js"></script>
+<script type="text/javascript" src="js/siteperso.js"></script>
+</html>
